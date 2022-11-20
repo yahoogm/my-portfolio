@@ -3,7 +3,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="bg-dark text-primary font-bold fixed w-full top-0 z-30">
+    <header className="bg-dark text-primary font-bold sticky w-full top-0 z-30 mb-20">
       <div className="flex flex-col md:flex-row md:justify-between md:items-center md:py-3 md:px-16 lg:px-32">
         <div className="flex items-center justify-between md:px-0 px-4 py-3">
           <div className="uppercase md:text-2xl lg:text-3xl">
@@ -18,9 +18,9 @@ const Navbar = () => {
           </div>
         </div>
         <div className={`${isOpen ? "flex" : "hidden"} md:flex flex-col px-4 py-2 md:px-0 md:py-0 md:flex-row md:space-x-6 space-y-1 md:space-y-0 text-light font-thin text-sm md:text-lg lg:text-2xl`}>
-          <Link href={""}>About</Link>
-          <Link href={""}>Tech Stack</Link>
-          <Link href={""}>Project</Link>
+          <Link href={"#about"}>About</Link>
+          <Link href={"#tech"}>Tech Stack</Link>
+          <Link href={"#projek"}>Project</Link>
         </div>
       </div>
     </header>
